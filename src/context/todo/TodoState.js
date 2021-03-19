@@ -16,7 +16,7 @@ export const TodoState = ({ children }) => {
 
   const addTodo = async title => {
     const response = await fetch(
-      "https://rn-todo-app-42a02-default-rtdb.europe-west1.firebasedatabase.app/todos.json",
+      //Your Firebase DB Link,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -41,7 +41,10 @@ export const TodoState = ({ children }) => {
           text: "Удалить",
           onPress: async () => {
             changeScreen(null);
-            await fetch(`https://rn-todo-app-42a02-default-rtdb.europe-west1.firebasedatabase.app/todos/${id}.json`, {
+            await fetch(
+              //Your Firebase DB Link with id
+              , 
+              {
               method: 'DELETE',
               headers: { "Content-Type": "application/json" },
             })
@@ -61,7 +64,7 @@ export const TodoState = ({ children }) => {
     clearError()
     try {
       const response = await fetch(
-        "https://rn-todo-app-42a02-default-rtdb.europe-west1.firebasedatabase.app/todos.json",
+        //Your Firebase DB Link,
         {
           method: "GET",
           headers: { "Content-Type": "application/json" },
@@ -83,7 +86,7 @@ export const TodoState = ({ children }) => {
     clearError();
     try {
       await fetch(
-        `https://rn-todo-app-42a02-default-rtdb.europe-west1.firebasedatabase.app/todos/${id}.json`,
+        //Your Firebase DB Link with id,
         {
           method: "PATCH",
           headers: { "Content-Type": "application/json" },
