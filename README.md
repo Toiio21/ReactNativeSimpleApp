@@ -10,4 +10,4 @@
 {branch} — ветка репозитория;
 {path} — путь к месту нахождения картинки.
 
-https://github.com/Toiio21/ReactNativeSimpleApp/blob/main/Untitled%20Diagram.png
+(https://github.com/Toiio21/ReactNativeSimpleApp/blob/main/Untitled%20Diagram.png)
